@@ -11,16 +11,13 @@ import { useNavigate } from "react-router-dom";
 const Listing = () => {
   const navigate = useNavigate();
 
-
-
   const openImageInNewTab=(imageLink)=>{
     window.open(imageLink, '_blank').focus();
 
 
 
    // alert(imageLink);
-
-  }
+   }
 
   const openLoginPage=()=>{
     navigate("/login")
@@ -56,10 +53,6 @@ const Listing = () => {
         
       ),
     },
-    
-  
-  
-    
     {
       title: 'Action',
       key: 'action',
@@ -72,23 +65,21 @@ const Listing = () => {
     },
   ];
   
-
-
-  const [data,setData]=useState([]);
+const [data,setData]=useState([]);
 
 useEffect(()=>{
 
-  async function apiCall(){
-    try {
-      const result=await axios.get("http://rustycoder.live:8000/listing")
-      setData(result.data.data);
+  // async function apiCall(){
+  //   try {
+  //     const result=await axios.get("http://rustycoder.live:8000/listing")
+  //     setData(result.data.data);
       
-    } catch (error) {
-      console.log(error);
-    }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
   
-  }
-  apiCall();
+  // }
+  // apiCall();
 
   /*
   axios.get("http://rustycoder.live:8000/listing").then(result=>{
@@ -102,14 +93,14 @@ useEffect(()=>{
  
 
 
-  /*
+  
   fetch('http://rustycoder.live:8000/listing')
   .then((response) => response.json())
   .then((result) => {
     console.log(result.data);
     setData(result.data);
   });
-  */
+  
 
 
 

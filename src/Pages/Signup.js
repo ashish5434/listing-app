@@ -8,6 +8,12 @@ const Signup = () => {
     console.log('Failed:', errorInfo);
   };
   return (
+    <div style={{
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      height:"100vh",
+    }}>
     <Form
       name="basic"
       labelCol={{
@@ -71,6 +77,7 @@ const Signup = () => {
         </Button>
       </Form.Item>
     </Form>
+    </div>
   );
 };
 export default Signup;
